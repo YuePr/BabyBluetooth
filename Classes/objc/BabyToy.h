@@ -31,4 +31,8 @@
 //根据UUIDString查找CBCharacteristic
 +(CBCharacteristic *)findCharacteristicFormServices:(NSMutableArray *)services
                                          UUIDString:(NSString *)UUIDString;
+//BCD转十进制
++(NSInteger)BCDToInt:(Byte)bcd;
+//十进制转bcd
++(Byte)intToBCD:(NSInteger)i;
 @end

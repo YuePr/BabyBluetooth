@@ -86,6 +86,28 @@
     return nil;
 }
 
+
+/***
+ 十进制转bcd
+ ****/
+
+
++(Byte)intToBCD:(NSInteger)i{
+    
+    return (((i / 10) << 4) + ((i % 10) & 0x0f));
+    
+}
+
+/***
+ BCD转十进制
+ ****/
+
++(NSInteger)BCDToInt:(Byte)bcd{
+    
+    return (0xff & (bcd >> 4)) * 10 + (0xf & bcd);
+    
+}
+
 @end
 
 
